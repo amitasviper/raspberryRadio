@@ -1,0 +1,6 @@
+For using mp3 or wav file as input source
+ffmpeg -i aaIshq.mp3 -f s16le -ar 22.05k -ac 1 - | sudo ./pifm - 100.0
+
+
+For using microphone as input source
+arecord -fS16_LE -r 22050 -Dplughw:1,0 - | sudo ./pifm - 100.1 22050
